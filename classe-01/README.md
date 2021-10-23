@@ -12,20 +12,20 @@ O cliente solicitou que implementasse a opção de realizar empréstimos de livr
 
 1 - Deve ser implementada uma nova tabela `usuarios` no banco de dados e suas respectivas funcionalidades na Api, com os seguintes campos:
 
--   Um identificador único do usuário como chave primaria e auto incremento;
--   O nome (obrigatório)
--   A idade
--   O email (obrigatório e único)
--   O telefone
--   O cpf (obrigatório e único)
+- Um identificador único do usuário como chave primaria e auto incremento;
+- O nome (obrigatório)
+- A idade
+- O email (obrigatório e único)
+- O telefone
+- O cpf (obrigatório e único)
 
 As funcionalidades necessárias para controlar a entidade `usuarios` são:
 
--   Listagem geral de usuarios
--   Listagem de apenas um usuario filtrado pelo seu identificador único
--   Cadastro de usuário
--   Atualização de usuário
--   Exclusão de usuário
+- Listagem geral de usuarios
+- Listagem de apenas um usuario filtrado pelo seu identificador único
+- Cadastro de usuário
+- Atualização de usuário
+- Exclusão de usuário
 
 _É preciso realizar todas as validações necessárias para evitar erros no banco de dados_
 
@@ -67,18 +67,18 @@ Exemplo de retorno de apenas um usuário:
 
 2 - Agora será implementada a tabela `emprestimos` no banco de dados, e suas respectivas funcionalidades na Api, com os seguintes campos:
 
--   Um identificador único do empréstimo como chave primaria e auto incremento;
--   O id do usuario (obrigatório)
--   O id do livro (obrigatório)
--   O status do empréstimo que só poderá receber dois valores (`pendente` e `devolvido`) e por padrão deverá ser `pendente`.
+- Um identificador único do empréstimo como chave primaria e auto incremento;
+- O id do usuario (obrigatório)
+- O id do livro (obrigatório)
+- O status do empréstimo que só poderá receber dois valores (`pendente` e `devolvido`) e por padrão deverá ser `pendente`.
 
 As funcionalidades necessárias para controlar a entidade `emprestimos` são:
 
--   Listagem geral de emprestimos
--   Listagem de apenas um empréstimo filtrado pelo seu identificador único
--   Cadastro de empréstimo
--   Atualização de empréstimo
--   Exclusão de empréstimo
+- Listagem geral de emprestimos
+- Listagem de apenas um empréstimo filtrado pelo seu identificador único
+- Cadastro de empréstimo
+- Atualização de empréstimo
+- Exclusão de empréstimo
 
 Obs.: A atualização de empréstimos só deverá permitir alteração do status do empréstimo, nenhum outro campo poderá ser alterado após o cadastro.
 
@@ -186,9 +186,9 @@ E finalmente o job será entregue e mais uma missão será cumprida. Parabéns!!
 
 Preencha a checklist para finalizar o exercício:
 
--   [ ] Resolver o exercício revendo a aula se necessário
--   [ ] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos ou `git add nome_do_arquivo` para adicionar um arquivo específico)
--   [ ] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
--   [ ] Pushar os commits no seu fork na origem (`git push origin nome-da-branch`)
+- [Ok] Resolver o exercício revendo a aula se necessário
+- [Ok] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos ou `git add nome_do_arquivo` para adicionar um arquivo específico)
+- [Ok] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
+- [Ok] Pushar os commits no seu fork na origem (`git push origin nome-da-branch`)
 
 ###### tags: `SQL` `módulo 3` `exercício de classe` `postgres` `nodeJS` `modelagem de dados`
