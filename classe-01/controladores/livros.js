@@ -87,13 +87,19 @@ const excluirLivro = async (req, res) => {
             return res.status(404).json('Livro não encontrado.');
         }
 
+        const { rowCount } = await conexao.query('select * from emprestimos where livro_id = $1', [id]);
+
+        if (rowCount > 0) {
+            return res.status(400).json('Este livro foi emprestado, não pode ser excluído.');
+        }
+
         const query = 'delete from livros where id = $1';
         const livroExcluido = await conexao.query(query, [id]);
 
         if (livroExcluido.rowCount === 0) {
             return res.status(400).json('Não foi possível excluir o livro')
         }
-
+        
         return res.status(200).json('O livro foi excluido com sucesso.');
     } catch (error) {
         return res.status(400).json(error.message);

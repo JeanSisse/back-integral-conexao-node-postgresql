@@ -92,6 +92,12 @@ const excluirAutor = async (req, res) => {
             return res.status(404).json('Autor não encontrado');
         }
 
+        const { rowCount } = await conexao.query('select * from livros where autor_id = $1', [id]);
+
+        if (rowCount > 0) {
+            return res.status(400).json(`Exsite${rowCount > 1 ? 'm livros associados' : ' livro associado'} ao autor.`);
+        }
+
         const query = 'delete from autores where id = $1';
         const autorExcluido = await conexao.query(query, [id]);
 
